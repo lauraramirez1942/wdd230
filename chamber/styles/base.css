@@ -1,0 +1,110 @@
+:root {
+    --required: 6px solid #9c2c13;
+    --input-border: solid 1px grey;
+    --valid: 6px solid green;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    background-color: #000;
+    color: #fff;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+nav li {
+    display: block;
+    text-align: center;
+}
+
+nav li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+}
+
+nav svg path {
+    fill: #fff;
+}
+
+#menu {
+    display: block;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    background-color: rgb(0, 64, 85);
+    max-height: 5rem;
+    justify-content: center;
+}
+
+header h1 {
+    color: #fff;
+    font-size: 2rem;
+    padding: 1rem;
+}
+
+header #profile-image {
+
+    border-radius: 50%;
+
+    width: 4rem;
+    border: 3px solid #fff;
+}
+
+main {
+    background-color: #fff;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+main h2 {
+
+    color: #000;
+
+    font-size: 1.5rem;
+    padding: 0.5rem;
+}
+
+.card {
+    background-color: rgb(211, 212, 185);
+    border: 1px solid #000;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    padding-bottom: 1rem;
+    width: 80%;
+    margin: 0.5rem;
+}
+
+.card li {
+    list-style: none;
+    padding: 0.5rem;
+}
+
+.card h3 {
+    font-size: 1.5rem;
+    color: white;
+    background-color: rgb(0, 64, 85);
+    padding: 1rem;
+    margin-top: 0;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgb(0, 64, 85);
+    color: #fff;
+}
