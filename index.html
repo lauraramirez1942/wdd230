@@ -10,7 +10,7 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-Eu7wX2l5uJp5aEnAeAPleZPz1/UA/KYvxV/QzjpQ3t3B+egvQ6E5E2fI0Kl+f4Bjrrrh9Z3jl5CCG0XM4O+xMw==" crossorigin="anonymous" />    
     
-    <link rel="shortcut icon" href="images/profile-img.jpeg" type="image/x-icon">
+    <link rel="shortcut icon" href="images/profile-img.webp" type="image/x-icon">
     <link rel="stylesheet" href="./styles/base.css">
     <link rel="stylesheet" href="./styles/larger.css">
 
@@ -22,14 +22,11 @@
 
 <body>
     <header>
-        <img id="profile-image" src="images/profile-img.jpeg" alt="Laura Ramirez's Profile Picture">
+        <img id="profile-image" src="images/profile-img.webp" alt="Laura Ramirez's Profile Picture">
         <h1 id="profile-name">Laura Ramirez</h1>
     </header>
 
     <nav>
-        
-
-        <h2>WDD 230: Portal</h2>
         <div id="burger-icon">&#9776;</div>
         <div>
             <ul id="menu-items">
@@ -50,30 +47,54 @@
     </nav>
     <main>
         <div id="hero">
-
+            <picture>
+                <source media="(max-width: 400px)" srcset="images/temple-mobile.webp">
+                <source media="(max-width: 960px)" srcset="images/temple-mobile.webp">
+                <img src="images/temple-mobile.webp" alt="Temple Bogota" loading="lazy">
+            </picture>
+            <div id="hero-content">
+                <p>Bogotá, Colombia Temple</p>
+            </div>
         </div>
-        <section class="card">
-            <h3>Learning Activities</h3>
-            <ul id="activities">
-                <li>Week 01: <a href=""> Layout | Media Query | JS Pen</a></li>
-                <li>Week 02: </li>
-                <li>Week 03: </li>
-                <li>Week 04: </li>
-                <li>Week 05: </li>
-                <li>Week 06: </li>
-            </ul>
-        </section>
-        <section class="card">
-            <h3>Information</h3>
-            <ul id="info">
-                <li>Bogotá, Colombia</li>
-                <li>🌞 76°F - Sunshine</li>
-                <li>Page Visits: 15</li>
-            </ul>
 
+        
+        <h2>WDD 230: Portal</h2>
+        <div class="card-container">
+            <section class="card">
+                <h3>Learning Activities</h3>
+                <ul id="activities">
+                    <li>Week 01: <a href=""> Layout | Media Query | JS Pen</a></li>
+                    <li>Week 02: </li>
+                    <li>Week 03: </li>
+                    <li>Week 04: </li>
+                    <li>Week 05: </li>
+                    <li>Week 06: </li>
+                </ul>
+            </section>
+            <section class="card" id="card-2">
+                <h3>Chamber of Commerce</h3>
+                <a href="chamber/index.html">Visit me</a>
+            </section>
+
+            <section class="card">
+                <h3>Information</h3>
+                <ul id="info">
+                    <li>Bogotá, Colombia</li>
+                    <li>🌞 76°F - Sunshine</li>
+                    <li id="visitCount"></li>
+                </ul>
+            </section>
+        </div>
+        <section id="map">
+            <h3>Map</h3>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d254508.39472727076!2d-74.27261571770505!3d4.648620625856909!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f9bfd2da6cb29%3A0x239d635520a33914!2zQm9nb3TDoSwgQm9nb3Rh!5e0!3m2!1sen!2sco!4v1700504434328!5m2!1sen!2sco"
+                width="600" height="450" style="border: 0" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
         </section>
-    </div>
+
     </main>
+
     <footer>
         <p class="footer-text">
             &copy; <span id="year"></span> | Laura Ramirez | Colombia 🇨🇴
@@ -84,6 +105,7 @@
     </footer>
 
     <script src="./scripts/getDate.js"></script>
+    <script src="./scripts/getVisits.js"></script>
     <script>
         // Script for toggling dark mode
         const darkModeToggle = document.getElementById('darkModeToggle');
