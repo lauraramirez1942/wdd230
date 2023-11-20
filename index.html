@@ -1,77 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="author" content="Laura Ramirez">
-        <meta name="description" content="Laura Ramirez WDD 230 Course Assignment">
-        <link rel="shortcut icon" href="images/profile-img.jpeg" type="image/x-icon">
-        <link rel="stylesheet" href="./styles/base.css">
-        <link rel="stylesheet" href="./styles/larger.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-        <title>Laura Ramirez - WDD 230 - Web Frontend Development</title>
-    </head>
 
-    <body>
-        <header>
-            <img id="profile-image" src="images/profile-img.jpeg" alt="Laura Ramirez's Profile Picture">
-            <h1 id="profile-name">Laura Ramirez</h1>
-        </header>
-        <nav>
-            <h2>WDD 230: Portal</h2>
-            <div>
-                <ul id="menu-items">
-                    <li class="menu-item">
-                        <a href="">Home</a>
-                    </li>
-                    <li class="menu-item">
-                        <a href="./week01/chamber-site-plan.html">Chamber</a>
-                    </li>
-                    <li class="menu-item">
-                        <a href="">Site Plan</a>
-                    </li>
-                    <li class="menu-item">
-                        <a href="">Form</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-        <main>
-            <div id="hero">
-                
-            </div>
-                <section class="card">
-                    <h3>Learning Activities</h3>
-                    <ul id="activities">
-                        <li>Week 01: <a href=""> Layout | Media Query | JS Pen</a></li>
-                        <li>Week 02: </li>
-                        <li>Week 03: </li>
-                        <li>Week 04: </li>
-                        <li>Week 05: </li>
-                        <li>Week 06: </li>
-                    </ul>
-                </section>
-                <section class="card">
-                    <h3>Information</h3>
-                    <ul id="info">
-                        <li>Bogotá, Colombia</li>
-                        <li>🌞 76°F - Sunshine</li>
-                        <li>Page Visits: 15</li>
-                    </ul>
-    
-                </section>
-            </div>
-        </main>
-        <footer>
-            <p class="footer-text">
-                &copy; <span id="year"></span> | Laura Ramirez | Colombia 🇨🇴
-            </p>
-            <p class="highlight" id="lastModified"></p>
-        </footer>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Laura Ramirez">
+    <meta name="description" content="Laura Ramirez WDD 230 Course Assignment">
+    <link rel="shortcut icon" href="images/profile-img.jpeg" type="image/x-icon">
+    <link rel="stylesheet" href="./styles/base.css">
+    <link rel="stylesheet" href="./styles/larger.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <title>Laura Ramirez - WDD 230 - Web Frontend Development</title>
+</head>
 
-        <script src="./scripts/getDate.js"></script>
-    </body>
+<body>
+    <header>
+        <img id="profile-image" src="images/profile-img.jpeg" alt="Laura Ramirez's Profile Picture">
+        <h1 id="profile-name">Laura Ramirez</h1>
+    </header>
+
+    <nav>
+        
+
+        <h2>WDD 230: Portal</h2>
+        <div id="burger-icon">&#9776;</div>
+        <div>
+            <ul id="menu-items">
+                <li class="menu-item">
+                    <a href="">Home</a>
+                </li>
+                <li class="menu-item">
+                    <a href="./week01/chamber-site-plan.html">Chamber</a>
+                </li>
+                <li class="menu-item">
+                    <a href="">Site Plan</a>
+                </li>
+                <li class="menu-item">
+                    <a href="">Form</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <main>
+        <div id="hero">
+
+        </div>
+        <section class="card">
+            <h3>Learning Activities</h3>
+            <ul id="activities">
+                <li>Week 01: <a href=""> Layout | Media Query | JS Pen</a></li>
+                <li>Week 02: </li>
+                <li>Week 03: </li>
+                <li>Week 04: </li>
+                <li>Week 05: </li>
+                <li>Week 06: </li>
+            </ul>
+        </section>
+        <section class="card">
+            <h3>Information</h3>
+            <ul id="info">
+                <li>Bogotá, Colombia</li>
+                <li>🌞 76°F - Sunshine</li>
+                <li>Page Visits: 15</li>
+            </ul>
+
+        </section>
+    </div>
+    </main>
+    <footer>
+        <p class="footer-text">
+            &copy; <span id="year"></span> | Laura Ramirez | Colombia 🇨🇴
+        </p>
+        <p class="highlight" id="lastModified"></p>
+        <!-- Add a dark mode toggle button -->
+        <button id="darkModeToggle">Toggle Dark Mode</button>
+    </footer>
+
+    <script src="./scripts/getDate.js"></script>
+    <script>
+        // Script for toggling dark mode
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        const body = document.body;
+
+        darkModeToggle.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+        });
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+        var burgerIcon = document.getElementById('burger-icon');
+        var menuItems = document.getElementById('menu-items');
+  
+        burgerIcon.addEventListener('click', function () {
+            menuItems.classList.toggle('show');
+            });
+        });
+    </script>
+
+</body>
+
 </html>

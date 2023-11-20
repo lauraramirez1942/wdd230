@@ -10,6 +10,11 @@ body {
     padding: 0;
 }
 
+body.dark-mode {
+    background-color: #333; /* Set a dark background color */
+    color: #fff; /* Set light text color */
+}
+
 nav {
     background-color: #000;
     color: #fff;
@@ -53,9 +58,7 @@ header h1 {
 }
 
 header #profile-image {
-
     border-radius: 50%;
-
     width: 4rem;
     border: 3px solid #fff;
 }
@@ -69,9 +72,7 @@ main {
 }
 
 main h2 {
-
     color: #000;
-
     font-size: 1.5rem;
     padding: 0.5rem;
 }
@@ -108,3 +109,100 @@ footer {
     background-color: rgb(0, 64, 85);
     color: #fff;
 }
+
+/* Dark mode styles */
+body.dark-mode nav {
+    background-color: #333;
+    color: #fff;
+}
+
+body.dark-mode nav li a {
+    color: #fff;
+}
+
+body.dark-mode header {
+    background-color: #111;
+}
+
+body.dark-mode header h1 {
+    color: #fff;
+}
+
+body.dark-mode main {
+    background-color: #333;
+    color: #fff;
+}
+
+body.dark-mode main h2 {
+    color: #fff;
+}
+
+body.dark-mode .card {
+    background-color: #444;
+    border: 1px solid #fff;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+body.dark-mode .card h3 {
+    background-color: #111;
+    color: #fff;
+}
+
+body.dark-mode footer {
+    background-color: #111;
+    color: #fff;
+}
+
+a {
+    color: white;
+}
+
+/* Add this to your existing CSS */
+nav {
+    text-align: center;
+  }
+  
+  #menu-items {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .menu-item {
+    display: inline-block;
+    margin: 0 10px;
+  }
+  
+  /* Hide menu items by default */
+  #menu-items {
+    display: block; /* Display the menu items by default on larger screens */
+  }
+  
+  /* Style the burger icon */
+  #burger-icon {
+    font-size: 24px;
+    cursor: pointer;
+    display: none; /* Hide the burger icon by default on larger screens */
+  }
+  
+  /* Media query for smaller screens (adjust the max-width as needed) */
+  @media only screen and (max-width: 600px) {
+    #menu-items {
+      display: none; /* Hide the menu items on smaller screens */
+    }
+  
+    #burger-icon {
+      display: block; /* Show the burger icon on smaller screens */
+    }
+  
+    /* Show the menu items in a vertical list when the burger icon is clicked */
+    #menu-items.show {
+      display: block;
+    }
+  
+    /* Hide the menu items when the burger icon is not clicked */
+    #menu-items:not(.show) {
+      display: none;
+    }
+  }
+  
