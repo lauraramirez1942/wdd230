@@ -63,12 +63,7 @@
             <section class="card">
                 <h3>Learning Activities</h3>
                 <ul id="activities">
-                    <li>Week 01: <a href=""> Layout | Media Query | JS Pen</a></li>
-                    <li>Week 02: </li>
-                    <li>Week 03: </li>
-                    <li>Week 04: </li>
-                    <li>Week 05: </li>
-                    <li>Week 06: </li>
+                    
                 </ul>
             </section>
             <section class="card" id="card-2">
@@ -76,13 +71,15 @@
                 <a href="chamber/index.html">Visit me</a>
             </section>
 
-            <section class="card">
+            <section class="card" id="card-3">
                 <h3>Information</h3>
-                <ul id="info">
-                    <li>Bogotá, Colombia</li>
-                    <li>🌞 76°F - Sunshine</li>
-                    <li id="visitCount"></li>
-                </ul>
+                <div id="weather">
+                    <h4>Weather</h4>
+                    <img id="weatherIcon">
+                    <p id="weatherTemp"></p>
+                    <p id="weatherDesc"></p>
+                </div>
+                <p id="visitCount"></p>
             </section>
         </div>
         <section id="map">
@@ -106,6 +103,7 @@
 
     <script src="./scripts/getDate.js"></script>
     <script src="./scripts/getVisits.js"></script>
+    <script src="./scripts/getWeather.js"></script>
     <script>
         // Script for toggling dark mode
         const darkModeToggle = document.getElementById('darkModeToggle');
