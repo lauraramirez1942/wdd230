@@ -26,16 +26,32 @@
         <title>Rexburg Chamber of Commerce | Discover</title>
     </head>
     <body>
+        <section id="banner">
+            <h3 id="meeting-message">Come and join us this wednesday at 7PM for our weekly meet and greet.<span
+                id="close-banner">❌</span></h3>
+        </section>
         <nav>
-            <img id="nav-logo" src="images/rexburg-city.webp" loading="lazy" alt="Rexburg Chamber of Commerce Logo">
-           
+            <img id="nav-logo" src="images/rexburg-city.webp" alt="Clear Water Chamber of Commerce Logo">
+            <div id="hamburger">
+                <svg xmlns="http://www.w3.org/2000/svg" height="48" width="48">
+                    <path d="M6 36v-3h36v3Zm0-10.5v-3h36v3ZM6 15v-3h36v3Z" />
+                </svg>
+            </div>
+            <div id="close-button">
+                <svg xmlns="http://www.w3.org/2000/svg" height="48" width="48">
+                    <path
+                        d="m12.45 37.65-2.1-2.1L21.9 24 10.35 12.45l2.1-2.1L24 21.9l11.55-11.55 2.1 2.1L26.1 24l11.55 11.55-2.1 2.1L24 26.1Z" />
+                </svg>
+            </div>
             <ul id="menu-items">
                 <li class="menu-item"><a href="index.html">Home</a></li>
                 <li class="menu-item"><a href="discover.html">Discover</a></li>
                 <li class="menu-item"><a href="directory.html">Directory</a></li>
                 <li class="menu-item"><a href="join.html">Join</a></li>
             </ul>
-            
+            <!-- Weather Place holder that will be automated to get are weather by Javascript -->
+            <div id="weather">
+            </div>
         </nav>
         <header>
             <section id="hero-1" class="hero">
@@ -121,7 +137,11 @@
             </p>
         </footer>
 
-        <script src="scripts/visit.js" defer></script>
         <script src="scripts/dates.js" defer></script>
+        <script src="scripts/visit.js" defer></script>
+        <script src="scripts/mobileMenu.js" defer></script>
+        <script src="scripts/weather.js" defer></script>
+        <script src="scripts/banner.js" defer></script>
+        <script src="scripts/showcase.js" defer></script>    
     </body>
 </html>
